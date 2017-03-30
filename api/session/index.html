@@ -216,14 +216,14 @@ $args = [
     'AMOUNT' =&gt; 123.50,
     'CURRENCY' =&gt; 'TRY'
 ];
-$response = $client-&gt;session('sessionToken', $args);
+$response = $client-&gt;session('session_token', $args);
 
 $args = [
     'TOKEN' =&gt; 'HZ3JBAFJ72AJTWRR75JOKWTFHMVHG7Y6UH6VTAGABLMV7LID',
     'SESSIONEXPIRY' =&gt; '168h'
 ];
 
-$response = $client-&gt;session('sessionExtend', $args);
+$response = $client-&gt;session('session_extend', $args);
 
 </code></pre>
               

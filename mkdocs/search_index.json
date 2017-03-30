@@ -47,7 +47,7 @@
         },
         {
             "location": "/api/session/",
-            "text": "Options\n\n\n\n\n\n\n\n\nAction Name\n\n\nAction\n\n\nParameters\n\n\n\n\n\n\n\n\n\n\nSession Token\n\n\nsession_token\n\n\nCUSTOMER, SESSIONTYPE, RETURNURL, MERCHANTPAYMENTID, AMOUNT, CURRENCY, CUSTOMEREMAIL, CUSTOMERNAME, CUSTOMERPHONE, CUSTOMERIP, CUSTOMERUSERAGENT, SESSIONEXPIRY, LANGUAGE, CAMPAIGNCODE, ORDERITEMS, TMXSESSIONQUERYINPUT, EXTRA, MAXINSTALLMENTCOUNT, SPLITPAYMENTTYPE\n\n\n\n\n\n\nSession Extend\n\n\nsession_extend\n\n\nTOKEN, SESSIONEXPIRY\n\n\n\n\n\n\n\n\nExample\n\n\n\n$args = [\n    'SESSIONTYPE' => 'PAYMENTSESSION',\n    'CUSTOMER' => '1',\n    'RETURNURL' => 'https://mysite.com/msu_return.php',\n    'MERCHANTPAYMENTID' => $paymentID,\n    'AMOUNT' => 123.50,\n    'CURRENCY' => 'TRY'\n];\n$response = $client->session('sessionToken', $args);\n\n$args = [\n    'TOKEN' => 'HZ3JBAFJ72AJTWRR75JOKWTFHMVHG7Y6UH6VTAGABLMV7LID',\n    'SESSIONEXPIRY' => '168h'\n];\n\n$response = $client->session('sessionExtend', $args);",
+            "text": "Options\n\n\n\n\n\n\n\n\nAction Name\n\n\nAction\n\n\nParameters\n\n\n\n\n\n\n\n\n\n\nSession Token\n\n\nsession_token\n\n\nCUSTOMER, SESSIONTYPE, RETURNURL, MERCHANTPAYMENTID, AMOUNT, CURRENCY, CUSTOMEREMAIL, CUSTOMERNAME, CUSTOMERPHONE, CUSTOMERIP, CUSTOMERUSERAGENT, SESSIONEXPIRY, LANGUAGE, CAMPAIGNCODE, ORDERITEMS, TMXSESSIONQUERYINPUT, EXTRA, MAXINSTALLMENTCOUNT, SPLITPAYMENTTYPE\n\n\n\n\n\n\nSession Extend\n\n\nsession_extend\n\n\nTOKEN, SESSIONEXPIRY\n\n\n\n\n\n\n\n\nExample\n\n\n\n$args = [\n    'SESSIONTYPE' => 'PAYMENTSESSION',\n    'CUSTOMER' => '1',\n    'RETURNURL' => 'https://mysite.com/msu_return.php',\n    'MERCHANTPAYMENTID' => $paymentID,\n    'AMOUNT' => 123.50,\n    'CURRENCY' => 'TRY'\n];\n$response = $client->session('session_token', $args);\n\n$args = [\n    'TOKEN' => 'HZ3JBAFJ72AJTWRR75JOKWTFHMVHG7Y6UH6VTAGABLMV7LID',\n    'SESSIONEXPIRY' => '168h'\n];\n\n$response = $client->session('session_extend', $args);",
             "title": "Session"
         },
         {
@@ -57,7 +57,7 @@
         },
         {
             "location": "/api/session/#example",
-            "text": "$args = [\n    'SESSIONTYPE' => 'PAYMENTSESSION',\n    'CUSTOMER' => '1',\n    'RETURNURL' => 'https://mysite.com/msu_return.php',\n    'MERCHANTPAYMENTID' => $paymentID,\n    'AMOUNT' => 123.50,\n    'CURRENCY' => 'TRY'\n];\n$response = $client->session('sessionToken', $args);\n\n$args = [\n    'TOKEN' => 'HZ3JBAFJ72AJTWRR75JOKWTFHMVHG7Y6UH6VTAGABLMV7LID',\n    'SESSIONEXPIRY' => '168h'\n];\n\n$response = $client->session('sessionExtend', $args);",
+            "text": "$args = [\n    'SESSIONTYPE' => 'PAYMENTSESSION',\n    'CUSTOMER' => '1',\n    'RETURNURL' => 'https://mysite.com/msu_return.php',\n    'MERCHANTPAYMENTID' => $paymentID,\n    'AMOUNT' => 123.50,\n    'CURRENCY' => 'TRY'\n];\n$response = $client->session('session_token', $args);\n\n$args = [\n    'TOKEN' => 'HZ3JBAFJ72AJTWRR75JOKWTFHMVHG7Y6UH6VTAGABLMV7LID',\n    'SESSIONEXPIRY' => '168h'\n];\n\n$response = $client->session('session_extend', $args);",
             "title": "Example"
         },
         {
