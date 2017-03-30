@@ -1,0 +1,25 @@
+site_name: MerchantSafe Unipay PHP SDK
+repo_url: https://github.com/mkorkmaz/msu-php-sdk-docs
+theme: readthedocs
+pages:
+- Home: 'index.md'
+- Simple Example: 'simple-example.md'
+- API:
+    - Session: 'api/session.md'
+    - FinancialTransactions: 'api/financial-transactions.md'
+    - Approve Actions: 'api/approve-actions.md'
+    - Reject Actions: 'api/reject-actions.md'
+    - Dealer: 'api/dealer.md'
+    - Dealer PST: 'api/dealer-pst.md'
+    - Dealer Type: 'api/dealer-type.md'
+    - eWallet: 'api/e-wallet.md'
+    - Merchant: 'api/merchant.md'
+    - Merchant User: 'api/merchant-user.md'
+    - Message Content: 'api/message-content.md'
+    - Pay By Link Payment: 'api/pay-by-link-payment.md'
+    - Payment Policy: 'api/payment-policy.md'
+    - Payment System: 'api/payment-system.md'
+    - Payment Type: 'api/payment-type.md'
+    - Recurring Payment: 'api/recurring-payment.md'
+    - Recurring Plan: 'api/recurring-plan.md'
+    - Recurring Plan Card: 'api/recurring-plan-card.md'
