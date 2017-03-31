@@ -89,6 +89,9 @@
         </ul>
     
 
+    <li class="toctree-l3"><a href="#sale-action-example">Sale Action Example</a></li>
+    
+
     <li class="toctree-l3"><a href="#pre-auth-action-example">Pre Auth Action Example</a></li>
     
 
@@ -235,11 +238,13 @@
 </tbody>
 </table>
 <h3 id="basic-usage">Basic Usage</h3>
-<pre><code class="php">$response = $client-&gt;financialTransactions($action, $args);
-```## Sale Action Example
+<pre><code class="php">
+$response = $client-&gt;financialTransactions($action, $args);
 
-```php
-$args = [
+</code></pre>
+
+<h2 id="sale-action-example">Sale Action Example</h2>
+<pre><code class="php">$args = [
     'MERCHANTPAYMENTID' =&gt; $orderPaymetId,
     'CUSTOMER' =&gt; '1',
     'AMOUNT' =&gt; 123.50,
