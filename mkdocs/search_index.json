@@ -2,7 +2,7 @@
     "docs": [
         {
             "location": "/",
-            "text": "MerchantSafe Unipay PHP SDK\n\n\n \n \n \n \n \n \n \n\n\nMerchantSafe Unipay (MSU)\n is an online payment solution \ndeveloped by \nAsseco SEE Turkey\n. \nThis SDK is not an official SDK\n. This library written \nsince Asseco does not provide any PHP SDK.\n\n\nInstallation\n\n\nYou need \nComposer\n to install MerchantSafe Unipay PHP SDK. \n\n\nThis library requires PHP 7.0 or later. \n\n\n\ncomposer require mkorkmaz/msu-php-sdk\n\n\n\n\n\nDisclaimer\n\n\n\n\nMerchantSafe Unipay (MSU) is trademark of Asseco SEE Turkey.\n\n\nContributors are not affiliated with Asseco SEE Turkey.\n\n\n\n\nTODO\n\n\n\n\nIntegration tests of Actions (At least %80 Code Coverage)\n\n\nArgument combinations for the actions will be implemented",
+            "text": "MerchantSafe Unipay PHP SDK\n\n\n \n \n \n \n \n \n \n\n\nMerchantSafe Unipay (MSU)\n is an online payment solution \ndeveloped by \nAsseco SEE Turkey\n. \nThis SDK is not an official SDK\n. This library written \nsince Asseco does not provide any PHP SDK.\n\n\nInstallation\n\n\nYou need \nComposer\n to install MerchantSafe Unipay PHP SDK. \n\n\nThis library requires PHP 7.0 or later. \n\n\n\ncomposer require mkorkmaz/msu-php-sdk\n\n\n\n\n\nSource Code\n\n\nSee on \nGithub\n. \n\n\nDisclaimer\n\n\n\n\nMerchantSafe Unipay (MSU) is trademark of Asseco SEE Turkey.\n\n\nContributors are not affiliated with Asseco SEE Turkey.\n\n\n\n\nTODO\n\n\n\n\nIntegration tests of Actions (At least %80 Code Coverage)\n\n\nArgument combinations for the actions will be implemented",
             "title": "Home"
         },
         {
@@ -14,6 +14,11 @@
             "location": "/#installation",
             "text": "You need  Composer  to install MerchantSafe Unipay PHP SDK.   This library requires PHP 7.0 or later.   \ncomposer require mkorkmaz/msu-php-sdk",
             "title": "Installation"
+        },
+        {
+            "location": "/#source-code",
+            "text": "See on  Github .",
+            "title": "Source Code"
         },
         {
             "location": "/#disclaimer",
