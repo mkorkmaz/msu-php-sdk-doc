@@ -52,7 +52,7 @@
         },
         {
             "location": "/api/session/",
-            "text": "Options\n\n\n\n\n\n\n\n\nAction Name\n\n\nAction\n\n\nParameters\n\n\n\n\n\n\n\n\n\n\nSession Token\n\n\nsession_token\n\n\nCUSTOMER, SESSIONTYPE, RETURNURL, MERCHANTPAYMENTID, AMOUNT, CURRENCY, CUSTOMEREMAIL, CUSTOMERNAME, CUSTOMERPHONE, CUSTOMERIP, CUSTOMERUSERAGENT, SESSIONEXPIRY, LANGUAGE, CAMPAIGNCODE, ORDERITEMS, TMXSESSIONQUERYINPUT, EXTRA, MAXINSTALLMENTCOUNT, SPLITPAYMENTTYPE\n\n\n\n\n\n\nSession Extend\n\n\nsession_extend\n\n\nTOKEN, SESSIONEXPIRY\n\n\n\n\n\n\n\n\nBasic Usage\n\n\n\n$response = $client-\nsession($action, $args);\n\n\n\n\nExample\n\n\n\n$args = [\n    'SESSIONTYPE' =\n 'PAYMENTSESSION',\n    'CUSTOMER' =\n '1',\n    'RETURNURL' =\n 'https://mysite.com/msu_return.php',\n    'MERCHANTPAYMENTID' =\n $paymentID,\n    'AMOUNT' =\n 123.50,\n    'CURRENCY' =\n 'TRY'\n];\n$response = $client-\nsession('session_token', $args);\n\n$args = [\n    'TOKEN' =\n 'HZ3JBAFJ72AJTWRR75JOKWTFHMVHG7Y6UH6VTAGABLMV7LID',\n    'SESSIONEXPIRY' =\n '168h'\n];\n\n$response = $client-\nsession('session_extend', $args);",
+            "text": "Options\n\n\n\n\n\n\n\n\nAction Name\n\n\nAction\n\n\nParameters\n\n\n\n\n\n\n\n\n\n\nSession Token\n\n\nsession_token\n\n\nCUSTOMER, SESSIONTYPE, RETURNURL, MERCHANTPAYMENTID, AMOUNT, CURRENCY, CUSTOMEREMAIL, CUSTOMERNAME, CUSTOMERPHONE, CUSTOMERIP, CUSTOMERUSERAGENT, SESSIONEXPIRY, LANGUAGE, CAMPAIGNCODE, ORDERITEMS, TMXSESSIONQUERYINPUT, EXTRA, MAXINSTALLMENTCOUNT, SPLITPAYMENTTYPE\n\n\n\n\n\n\nSession Extend\n\n\nsession_extend\n\n\nTOKEN, SESSIONEXPIRY\n\n\n\n\n\n\n\n\nBasic Usage\n\n\n$response = $client-\nsession($action, $args);\n\n\n\n\nExample\n\n\n\n$args = [\n    'SESSIONTYPE' =\n 'PAYMENTSESSION',\n    'CUSTOMER' =\n '1',\n    'RETURNURL' =\n 'https://mysite.com/msu_return.php',\n    'MERCHANTPAYMENTID' =\n $paymentID,\n    'AMOUNT' =\n 123.50,\n    'CURRENCY' =\n 'TRY'\n];\n$response = $client-\nsession('session_token', $args);\n\n$args = [\n    'TOKEN' =\n 'HZ3JBAFJ72AJTWRR75JOKWTFHMVHG7Y6UH6VTAGABLMV7LID',\n    'SESSIONEXPIRY' =\n '168h'\n];\n\n$response = $client-\nsession('session_extend', $args);",
             "title": "Session"
         },
         {
@@ -72,7 +72,7 @@
         },
         {
             "location": "/api/financial-transactions/",
-            "text": "Options\n\n\n\n\n\n\n\n\nAction Name\n\n\nAction\n\n\nParameters\n\n\n\n\n\n\n\n\n\n\nSale\n\n\nsale\n\n\nAMOUNT, BILLTOADDRESSLINE, BILLTOCITY, BILLTOCOUNTRY, BILLTOPOSTALCODE, CAMPAIGNS, CARDCVV, CARDEXPIRY, CARDHOLDERPORT, CARDPAN, CARDSAVENAME, CARDTOKEN, CURRENCY, CUSTOMER, CUSTOMEREMAIL, CUSTOMERIP, CUSTOMERNAME, CUSTOMERPHONE, CUSTOMERUSERAGENT, DEALERCODE, EXTRA, FORGROUP, INSTALLMENTS, ISREFUNDABLE, MERCHANTPAYMENTID, NAMEONCARD, PAYMENTSYSTEM, POINTS, SAVECARD, SHIPTOADDRESSLINE, SHIPTOCITY, SHIPTOCOUNTRY, SHIPTOPOSTALCODE, THREATMETRIXSESSIONID, TMXSESSIONQUERYINPUT\n\n\n\n\n\n\nPre Auth\n\n\npre_auth\n\n\nAMOUNT, BILLTOADDRESSLINE, BILLTOCITY, BILLTOCOUNTRY, BILLTOPOSTALCODE, CARDCVV, CARDEXPIRY, CARDHOLDERPORT, CARDPAN, CARDSAVENAME, CARDTOKEN, CURRENCY, CUSTOMER, CUSTOMEREMAIL, CUSTOMERIP, CUSTOMERNAME, CUSTOMERPHONE, CUSTOMERUSERAGENT, DEALERCODE, EXTRA, FORGROUP, INSTALLMENTS, ISREFUNDABLE, MERCHANTPAYMENTID, NAMEONCARD, PAYMENTSYSTEM, SAVECARD, SHIPTOADDRESSLINE, SHIPTOCITY, SHIPTOCOUNTRY, SHIPTOPOSTALCODE, THREATMETRIXSESSIONID, TMXSESSIONQUERYINPUT\n\n\n\n\n\n\nPost Auth\n\n\npost_auth\n\n\nMERCHANTPAYMENTID, PGTRANID, AMOUNT\n\n\n\n\n\n\nVoid\n\n\nvoid\n\n\nMERCHANTPAYMENTID, PGTRANID\n\n\n\n\n\n\nRefund\n\n\nrefund\n\n\nAMOUNT, PGTRANID, CURRENCY, MERCHANTPAYMENTID, SUBSTATUS\n\n\n\n\n\n\n\n\nBasic Usage\n\n\n\n$response = $client-\nfinancialTransactions($action, $args);\n```## Sale Action Example\n\n```php\n$args = [\n    'MERCHANTPAYMENTID' =\n $orderPaymetId,\n    'CUSTOMER' =\n '1',\n    'AMOUNT' =\n 123.50,\n    'CURRENCY' =\n 'TRY',\n    'CUSTOMEREMAIL' =\n 'mehmet@github.com',\n    'CUSTOMERNAME' =\n 'Mehmet Korkmaz',\n    'CUSTOMERIP'    =\n '127.0.0.1',\n    'CARDPAN' =\n '5406675406675403', // Test Card Number\n    'CARDEXPIRY' =\n '12.30',\n    'NAMEONCARD' =\n 'MEHMET KORKMAZ',\n    'CARDCVV' =\n '000'\n];\n$response = $client-\nfinancialTransactions('sale', $args);\n\necho $response['data']['responseCode']; // prints '00' which means transaction has been done successfully.\n\n\n\n\n\nPre Auth Action Example\n\n\n$args = [\n    'MERCHANTPAYMENTID' =\n $orderPaymetId,\n    'CUSTOMER' =\n '1',\n    'AMOUNT' =\n 123.50,\n    'CURRENCY' =\n 'TRY',\n    'CUSTOMEREMAIL' =\n 'mehmet@github.com',\n    'CUSTOMERNAME' =\n 'Mehmet Korkmaz',\n    'CUSTOMERIP'    =\n '127.0.0.1',\n    'CARDPAN' =\n '5406675406675403', // Test Card Number\n    'CARDEXPIRY' =\n '12.30',\n    'NAMEONCARD' =\n 'MEHMET KORKMAZ',\n    'CARDCVV' =\n '000'\n];\n$response = $client-\nfinancialTransactions('pre_auth', $args);\n\necho $response['data']['responseCode']; // prints '00' which means pre auth has been done successfully.",
+            "text": "Options\n\n\n\n\n\n\n\n\nAction Name\n\n\nAction\n\n\nParameters\n\n\n\n\n\n\n\n\n\n\nSale\n\n\nsale\n\n\nAMOUNT, BILLTOADDRESSLINE, BILLTOCITY, BILLTOCOUNTRY, BILLTOPOSTALCODE, CAMPAIGNS, CARDCVV, CARDEXPIRY, CARDHOLDERPORT, CARDPAN, CARDSAVENAME, CARDTOKEN, CURRENCY, CUSTOMER, CUSTOMEREMAIL, CUSTOMERIP, CUSTOMERNAME, CUSTOMERPHONE, CUSTOMERUSERAGENT, DEALERCODE, EXTRA, FORGROUP, INSTALLMENTS, ISREFUNDABLE, MERCHANTPAYMENTID, NAMEONCARD, PAYMENTSYSTEM, POINTS, SAVECARD, SHIPTOADDRESSLINE, SHIPTOCITY, SHIPTOCOUNTRY, SHIPTOPOSTALCODE, THREATMETRIXSESSIONID, TMXSESSIONQUERYINPUT\n\n\n\n\n\n\nPre Auth\n\n\npre_auth\n\n\nAMOUNT, BILLTOADDRESSLINE, BILLTOCITY, BILLTOCOUNTRY, BILLTOPOSTALCODE, CARDCVV, CARDEXPIRY, CARDHOLDERPORT, CARDPAN, CARDSAVENAME, CARDTOKEN, CURRENCY, CUSTOMER, CUSTOMEREMAIL, CUSTOMERIP, CUSTOMERNAME, CUSTOMERPHONE, CUSTOMERUSERAGENT, DEALERCODE, EXTRA, FORGROUP, INSTALLMENTS, ISREFUNDABLE, MERCHANTPAYMENTID, NAMEONCARD, PAYMENTSYSTEM, SAVECARD, SHIPTOADDRESSLINE, SHIPTOCITY, SHIPTOCOUNTRY, SHIPTOPOSTALCODE, THREATMETRIXSESSIONID, TMXSESSIONQUERYINPUT\n\n\n\n\n\n\nPost Auth\n\n\npost_auth\n\n\nMERCHANTPAYMENTID, PGTRANID, AMOUNT\n\n\n\n\n\n\nVoid\n\n\nvoid\n\n\nMERCHANTPAYMENTID, PGTRANID\n\n\n\n\n\n\nRefund\n\n\nrefund\n\n\nAMOUNT, PGTRANID, CURRENCY, MERCHANTPAYMENTID, SUBSTATUS\n\n\n\n\n\n\n\n\nBasic Usage\n\n\n$response = $client-\nfinancialTransactions($action, $args);\n```## Sale Action Example\n\n```php\n$args = [\n    'MERCHANTPAYMENTID' =\n $orderPaymetId,\n    'CUSTOMER' =\n '1',\n    'AMOUNT' =\n 123.50,\n    'CURRENCY' =\n 'TRY',\n    'CUSTOMEREMAIL' =\n 'mehmet@github.com',\n    'CUSTOMERNAME' =\n 'Mehmet Korkmaz',\n    'CUSTOMERIP'    =\n '127.0.0.1',\n    'CARDPAN' =\n '5406675406675403', // Test Card Number\n    'CARDEXPIRY' =\n '12.30',\n    'NAMEONCARD' =\n 'MEHMET KORKMAZ',\n    'CARDCVV' =\n '000'\n];\n$response = $client-\nfinancialTransactions('sale', $args);\n\necho $response['data']['responseCode']; // prints '00' which means transaction has been done successfully.\n\n\n\n\n\nPre Auth Action Example\n\n\n$args = [\n    'MERCHANTPAYMENTID' =\n $orderPaymetId,\n    'CUSTOMER' =\n '1',\n    'AMOUNT' =\n 123.50,\n    'CURRENCY' =\n 'TRY',\n    'CUSTOMEREMAIL' =\n 'mehmet@github.com',\n    'CUSTOMERNAME' =\n 'Mehmet Korkmaz',\n    'CUSTOMERIP'    =\n '127.0.0.1',\n    'CARDPAN' =\n '5406675406675403', // Test Card Number\n    'CARDEXPIRY' =\n '12.30',\n    'NAMEONCARD' =\n 'MEHMET KORKMAZ',\n    'CARDCVV' =\n '000'\n];\n$response = $client-\nfinancialTransactions('pre_auth', $args);\n\necho $response['data']['responseCode']; // prints '00' which means pre auth has been done successfully.",
             "title": "FinancialTransactions"
         },
         {
@@ -92,7 +92,7 @@
         },
         {
             "location": "/api/approve-actions/",
-            "text": "Options\n\n\n\n\n\n\n\n\nAction Name\n\n\nAction\n\n\nParameters\n\n\n\n\n\n\n\n\n\n\nApprove Transaction\n\n\napprove_transaction\n\n\nPGTRANID\n\n\n\n\n\n\nApprove Dealer\n\n\napprove_dealer\n\n\nDEALERCODE\n\n\n\n\n\n\n\n\nBasic Usage\n\n\n\n$response = $client-\napproveActions($action, $args);",
+            "text": "Options\n\n\n\n\n\n\n\n\nAction Name\n\n\nAction\n\n\nParameters\n\n\n\n\n\n\n\n\n\n\nApprove Transaction\n\n\napprove_transaction\n\n\nPGTRANID\n\n\n\n\n\n\nApprove Dealer\n\n\napprove_dealer\n\n\nDEALERCODE\n\n\n\n\n\n\n\n\nBasic Usage\n\n\n$response = $client-\napproveActions($action, $args);",
             "title": "Approve Actions"
         },
         {
@@ -107,7 +107,7 @@
         },
         {
             "location": "/api/reject-actions/",
-            "text": "Options\n\n\n\n\n\n\n\n\nAction Name\n\n\nAction\n\n\nParameters\n\n\n\n\n\n\n\n\n\n\nReject Transaction\n\n\nreject_transaction\n\n\nMERCHANTPAYMENTID\n\n\n\n\n\n\n\n\nBasic Usage\n\n\n\n$response = $client-\nrejectActions($action, $args);",
+            "text": "Options\n\n\n\n\n\n\n\n\nAction Name\n\n\nAction\n\n\nParameters\n\n\n\n\n\n\n\n\n\n\nReject Transaction\n\n\nreject_transaction\n\n\nMERCHANTPAYMENTID\n\n\n\n\n\n\n\n\nBasic Usage\n\n\n$response = $client-\nrejectActions($action, $args);",
             "title": "Reject Actions"
         },
         {
@@ -122,7 +122,7 @@
         },
         {
             "location": "/api/dealer/",
-            "text": "Options\n\n\n\n\n\n\n\n\nAction Name\n\n\nAction\n\n\nParameters\n\n\n\n\n\n\n\n\n\n\nAdd\n\n\nadd\n\n\nNAME, DEALERCODE, CONTACTNAME, CONTACTPHONE, CONTACTEMAIL, CONTACTFAX, CONTACTWEBADDRESS, DEALERTYPES\n\n\n\n\n\n\nEdit\n\n\nedit\n\n\nNAME, DEALERCODE, PARENTDEALERCODE, CONTACTNAME, CONTACTPHONE, CONTACTEMAIL, CONTACTFAX, CONTACTWEBADDRESS, DEALERTYPES\n\n\n\n\n\n\nEnable\n\n\nenable\n\n\nDEALERCODE, REASON\n\n\n\n\n\n\nDisable\n\n\ndisable\n\n\nDEALERCODE, REASON\n\n\n\n\n\n\nAdd Merchant User Dealer\n\n\nadd_merchant_user_dealer\n\n\nMERCHANTUSEREMAIL, DEALERCODES\n\n\n\n\n\n\nRemove Merchant User Dealer\n\n\nremove_merchant_user_dealer\n\n\nMERCHANTUSEREMAIL, DEALERCODES\n\n\n\n\n\n\n\n\nBasic Usage\n\n\n\n$response = $client-\ndealer($action, $args);",
+            "text": "Options\n\n\n\n\n\n\n\n\nAction Name\n\n\nAction\n\n\nParameters\n\n\n\n\n\n\n\n\n\n\nAdd\n\n\nadd\n\n\nNAME, DEALERCODE, CONTACTNAME, CONTACTPHONE, CONTACTEMAIL, CONTACTFAX, CONTACTWEBADDRESS, DEALERTYPES\n\n\n\n\n\n\nEdit\n\n\nedit\n\n\nNAME, DEALERCODE, PARENTDEALERCODE, CONTACTNAME, CONTACTPHONE, CONTACTEMAIL, CONTACTFAX, CONTACTWEBADDRESS, DEALERTYPES\n\n\n\n\n\n\nEnable\n\n\nenable\n\n\nDEALERCODE, REASON\n\n\n\n\n\n\nDisable\n\n\ndisable\n\n\nDEALERCODE, REASON\n\n\n\n\n\n\nAdd Merchant User Dealer\n\n\nadd_merchant_user_dealer\n\n\nMERCHANTUSEREMAIL, DEALERCODES\n\n\n\n\n\n\nRemove Merchant User Dealer\n\n\nremove_merchant_user_dealer\n\n\nMERCHANTUSEREMAIL, DEALERCODES\n\n\n\n\n\n\n\n\nBasic Usage\n\n\n$response = $client-\ndealer($action, $args);",
             "title": "Dealer"
         },
         {
@@ -137,7 +137,7 @@
         },
         {
             "location": "/api/dealer-pst/",
-            "text": "Options\n\n\n\n\n\n\n\n\nAction Name\n\n\nAction\n\n\nParameters\n\n\n\n\n\n\n\n\n\n\nAdd\n\n\nadd\n\n\nSUBMERCHANTCODE, PAYMENTSYSTEMTYPE, DEALERCODE\n\n\n\n\n\n\nEdit\n\n\nedit\n\n\nSUBMERCHANTCODE, PAYMENTSYSTEMTYPE, DEALERCODE\n\n\n\n\n\n\nDelete\n\n\ndelete\n\n\nDEALERCODE, PAYMENTSYSTEMTYPE\n\n\n\n\n\n\n\n\nBasic Usage\n\n\n\n$response = $client-\ndealerPst($action, $args);",
+            "text": "Options\n\n\n\n\n\n\n\n\nAction Name\n\n\nAction\n\n\nParameters\n\n\n\n\n\n\n\n\n\n\nAdd\n\n\nadd\n\n\nSUBMERCHANTCODE, PAYMENTSYSTEMTYPE, DEALERCODE\n\n\n\n\n\n\nEdit\n\n\nedit\n\n\nSUBMERCHANTCODE, PAYMENTSYSTEMTYPE, DEALERCODE\n\n\n\n\n\n\nDelete\n\n\ndelete\n\n\nDEALERCODE, PAYMENTSYSTEMTYPE\n\n\n\n\n\n\n\n\nBasic Usage\n\n\n$response = $client-\ndealerPst($action, $args);",
             "title": "Dealer PST"
         },
         {
@@ -152,7 +152,7 @@
         },
         {
             "location": "/api/dealer-type/",
-            "text": "Options\n\n\n\n\n\n\n\n\nAction Name\n\n\nAction\n\n\nParameters\n\n\n\n\n\n\n\n\n\n\nAdd\n\n\nadd\n\n\nDEALERTYPENAME, DESCRIPTIONREQUIRED, MAXINSTALLMENTCOUNT\n\n\n\n\n\n\nEdit\n\n\nedit\n\n\nDEALERTYPENAME, DESCRIPTIONREQUIRED, MAXINSTALLMENTCOUNT\n\n\n\n\n\n\nDelete\n\n\ndelete\n\n\nDEALERTYPENAME\n\n\n\n\n\n\n\n\nBasic Usage\n\n\n\n$response = $client-\ndealerType($action, $args);",
+            "text": "Options\n\n\n\n\n\n\n\n\nAction Name\n\n\nAction\n\n\nParameters\n\n\n\n\n\n\n\n\n\n\nAdd\n\n\nadd\n\n\nDEALERTYPENAME, DESCRIPTIONREQUIRED, MAXINSTALLMENTCOUNT\n\n\n\n\n\n\nEdit\n\n\nedit\n\n\nDEALERTYPENAME, DESCRIPTIONREQUIRED, MAXINSTALLMENTCOUNT\n\n\n\n\n\n\nDelete\n\n\ndelete\n\n\nDEALERTYPENAME\n\n\n\n\n\n\n\n\nBasic Usage\n\n\n$response = $client-\ndealerType($action, $args);",
             "title": "Dealer Type"
         },
         {
@@ -167,7 +167,7 @@
         },
         {
             "location": "/api/e-wallet/",
-            "text": "Options\n\n\n\n\n\n\n\n\nAction Name\n\n\nAction\n\n\nParameters\n\n\n\n\n\n\n\n\n\n\nAdd Card\n\n\nadd_card\n\n\nCUSTOMER, NAMEONCARD, CARDPAN, CARDEXPIRY, CARDSAVENAME, CUSTOMERNAME, CUSTOMEREMAIL, CUSTOMERPHONE\n\n\n\n\n\n\nEdit Card\n\n\nedit_card\n\n\nCARDTOKEN, CARDEXPIRY, NAMEONCARD, CARDSAVENAME\n\n\n\n\n\n\nDelete Card\n\n\ndelete_card\n\n\nCARDTOKEN\n\n\n\n\n\n\n\n\nBasic Usage\n\n\n\n$response = $client-\neWallet($action, $args);",
+            "text": "Options\n\n\n\n\n\n\n\n\nAction Name\n\n\nAction\n\n\nParameters\n\n\n\n\n\n\n\n\n\n\nAdd Card\n\n\nadd_card\n\n\nCUSTOMER, NAMEONCARD, CARDPAN, CARDEXPIRY, CARDSAVENAME, CUSTOMERNAME, CUSTOMEREMAIL, CUSTOMERPHONE\n\n\n\n\n\n\nEdit Card\n\n\nedit_card\n\n\nCARDTOKEN, CARDEXPIRY, NAMEONCARD, CARDSAVENAME\n\n\n\n\n\n\nDelete Card\n\n\ndelete_card\n\n\nCARDTOKEN\n\n\n\n\n\n\n\n\nBasic Usage\n\n\n$response = $client-\neWallet($action, $args);",
             "title": "eWallet"
         },
         {
@@ -182,7 +182,7 @@
         },
         {
             "location": "/api/merchant/",
-            "text": "Options\n\n\n\n\n\n\n\n\nAction Name\n\n\nAction\n\n\nParameters\n\n\n\n\n\n\n\n\n\n\nEnable\n\n\nenable\n\n\nMERCHANTBUSINESSID\n\n\n\n\n\n\nDisable\n\n\ndisable\n\n\nMERCHANTBUSINESSID\n\n\n\n\n\n\n\n\nBasic Usage\n\n\n\n$response = $client-\nmerchant($action, $args);",
+            "text": "Options\n\n\n\n\n\n\n\n\nAction Name\n\n\nAction\n\n\nParameters\n\n\n\n\n\n\n\n\n\n\nEnable\n\n\nenable\n\n\nMERCHANTBUSINESSID\n\n\n\n\n\n\nDisable\n\n\ndisable\n\n\nMERCHANTBUSINESSID\n\n\n\n\n\n\n\n\nBasic Usage\n\n\n$response = $client-\nmerchant($action, $args);",
             "title": "Merchant"
         },
         {
@@ -197,7 +197,7 @@
         },
         {
             "location": "/api/merchant-user/",
-            "text": "Options\n\n\n\n\n\n\n\n\nAction Name\n\n\nAction\n\n\nParameters\n\n\n\n\n\n\n\n\n\n\nAdd\n\n\nadd\n\n\nUSERNAME, MERCHANTUSEREMAIL, ROLE, TIMEZONE\n\n\n\n\n\n\nEdit\n\n\nedit\n\n\nUSERNAME, MERCHANTUSEREMAIL, ROLE, ISLOCKED, MERCHANTUSERPASSWORD, CONFIRMPASSWORD\n\n\n\n\n\n\nReinvite\n\n\nreinvite\n\n\nMERCHANTUSEREMAIL\n\n\n\n\n\n\n\n\nBasic Usage\n\n\n\n$response = $client-\nmerchantUser($action, $args);",
+            "text": "Options\n\n\n\n\n\n\n\n\nAction Name\n\n\nAction\n\n\nParameters\n\n\n\n\n\n\n\n\n\n\nAdd\n\n\nadd\n\n\nUSERNAME, MERCHANTUSEREMAIL, ROLE, TIMEZONE\n\n\n\n\n\n\nEdit\n\n\nedit\n\n\nUSERNAME, MERCHANTUSEREMAIL, ROLE, ISLOCKED, MERCHANTUSERPASSWORD, CONFIRMPASSWORD\n\n\n\n\n\n\nReinvite\n\n\nreinvite\n\n\nMERCHANTUSEREMAIL\n\n\n\n\n\n\n\n\nBasic Usage\n\n\n$response = $client-\nmerchantUser($action, $args);",
             "title": "Merchant User"
         },
         {
@@ -212,7 +212,7 @@
         },
         {
             "location": "/api/message-content/",
-            "text": "Options\n\n\n\n\n\n\n\n\nAction Name\n\n\nAction\n\n\nParameters\n\n\n\n\n\n\n\n\n\n\nAdd\n\n\nadd\n\n\nTITLE, CONTENT, MESSAGECONTENTTYPE, LANGUAGE\n\n\n\n\n\n\nEdit\n\n\nedit\n\n\nMESSAGECONTENTID, TITLE, CONTENT, MESSAGECONTENTTYPE, LANGUAGE\n\n\n\n\n\n\nDelete\n\n\ndelete\n\n\nMESSAGECONTENTID\n\n\n\n\n\n\n\n\nBasic Usage\n\n\n\n$response = $client-\nmessageContent($action, $args);",
+            "text": "Options\n\n\n\n\n\n\n\n\nAction Name\n\n\nAction\n\n\nParameters\n\n\n\n\n\n\n\n\n\n\nAdd\n\n\nadd\n\n\nTITLE, CONTENT, MESSAGECONTENTTYPE, LANGUAGE\n\n\n\n\n\n\nEdit\n\n\nedit\n\n\nMESSAGECONTENTID, TITLE, CONTENT, MESSAGECONTENTTYPE, LANGUAGE\n\n\n\n\n\n\nDelete\n\n\ndelete\n\n\nMESSAGECONTENTID\n\n\n\n\n\n\n\n\nBasic Usage\n\n\n$response = $client-\nmessageContent($action, $args);",
             "title": "Message Content"
         },
         {
@@ -227,7 +227,7 @@
         },
         {
             "location": "/api/pay-by-link-payment/",
-            "text": "Options\n\n\n\n\n\n\n\n\nAction Name\n\n\nAction\n\n\nParameters\n\n\n\n\n\n\n\n\n\n\nAdd\n\n\nadd\n\n\nSESSIONEXPIRY, MERCHANTPAYMENTID, AMOUNT, CURRENCY, CUSTOMER, RETURNURL, CUSTOMEREMAIL, CUSTOMERNAME, CUSTOMERPHONE, TCKN, LANGUAGE, ORDERITEMS\n\n\n\n\n\n\nCancel\n\n\ncancel\n\n\nPAYBYLINKTOKEN\n\n\n\n\n\n\nResend\n\n\nresend\n\n\nPAYBYLINKTOKEN\n\n\n\n\n\n\n\n\nBasic Usage\n\n\n\n$response = $client-\npayByLinkPayment($action, $args);",
+            "text": "Options\n\n\n\n\n\n\n\n\nAction Name\n\n\nAction\n\n\nParameters\n\n\n\n\n\n\n\n\n\n\nAdd\n\n\nadd\n\n\nSESSIONEXPIRY, MERCHANTPAYMENTID, AMOUNT, CURRENCY, CUSTOMER, RETURNURL, CUSTOMEREMAIL, CUSTOMERNAME, CUSTOMERPHONE, TCKN, LANGUAGE, ORDERITEMS\n\n\n\n\n\n\nCancel\n\n\ncancel\n\n\nPAYBYLINKTOKEN\n\n\n\n\n\n\nResend\n\n\nresend\n\n\nPAYBYLINKTOKEN\n\n\n\n\n\n\n\n\nBasic Usage\n\n\n$response = $client-\npayByLinkPayment($action, $args);",
             "title": "Pay By Link Payment"
         },
         {
@@ -242,7 +242,7 @@
         },
         {
             "location": "/api/payment-policy/",
-            "text": "Options\n\n\n\n\n\n\n\n\nAction Name\n\n\nAction\n\n\nParameters\n\n\n\n\n\n\n\n\n\n\nAdd\n\n\nadd\n\n\nPAYMENTSYSTEM, PPOLICY, CURRENCY, AMOUNTLIMIT\n\n\n\n\n\n\nEdit\n\n\nedit\n\n\nPAYMENTSYSTEM, PPOLICY, CURRENCY, AMOUNTLIMIT\n\n\n\n\n\n\n\n\nBasic Usage\n\n\n\n$response = $client-\npaymentPolicy($action, $args);",
+            "text": "Options\n\n\n\n\n\n\n\n\nAction Name\n\n\nAction\n\n\nParameters\n\n\n\n\n\n\n\n\n\n\nAdd\n\n\nadd\n\n\nPAYMENTSYSTEM, PPOLICY, CURRENCY, AMOUNTLIMIT\n\n\n\n\n\n\nEdit\n\n\nedit\n\n\nPAYMENTSYSTEM, PPOLICY, CURRENCY, AMOUNTLIMIT\n\n\n\n\n\n\n\n\nBasic Usage\n\n\n$response = $client-\npaymentPolicy($action, $args);",
             "title": "Payment Policy"
         },
         {
@@ -257,7 +257,7 @@
         },
         {
             "location": "/api/payment-system/",
-            "text": "Options\n\n\n\n\n\n\n\n\nAction Name\n\n\nAction\n\n\nParameters\n\n\n\n\n\n\n\n\n\n\nAdd\n\n\nadd\n\n\nPAYMENTSYSTEM, PAYMENTSYSTEMTYPE, STATUS, PAYMENTSYSTEMMODE, APIMERCHANTID, APIUSERNAME, APIPASSWORD, GATE3DKEY, INTEGRATIONEXTRAFIELD00, INTEGRATIONEXTRAFIELD01, ISDEFAULT, SUBMERCHANTCODE\n\n\n\n\n\n\nEdit\n\n\nedit\n\n\nPAYMENTSYSTEMTYPE, PAYMENTSYSTEM, STATUS, PAYMENTSYSTEMMODE, APIMERCHANTID, APIUSERNAME, APIPASSWORD, GATE3DKEY, INTEGRATIONEXTRAFIELD00, INTEGRATIONEXTRAFIELD01, ISDEFAULT, SUBMERCHANTCODE\n\n\n\n\n\n\nRead\n\n\nread\n\n\nPAYMENTSYSTEMTYPE, PAYMENTSYSTEM\n\n\n\n\n\n\nEnable\n\n\nenable\n\n\nPAYMENTSYSTEMTYPE, PAYMENTSYSTEM\n\n\n\n\n\n\nDisable\n\n\ndisable\n\n\nPAYMENTSYSTEMTYPE, PAYMENTSYSTEM\n\n\n\n\n\n\n\n\nBasic Usage\n\n\n\n$response = $client-\npaymentSystem($action, $args);",
+            "text": "Options\n\n\n\n\n\n\n\n\nAction Name\n\n\nAction\n\n\nParameters\n\n\n\n\n\n\n\n\n\n\nAdd\n\n\nadd\n\n\nPAYMENTSYSTEM, PAYMENTSYSTEMTYPE, STATUS, PAYMENTSYSTEMMODE, APIMERCHANTID, APIUSERNAME, APIPASSWORD, GATE3DKEY, INTEGRATIONEXTRAFIELD00, INTEGRATIONEXTRAFIELD01, ISDEFAULT, SUBMERCHANTCODE\n\n\n\n\n\n\nEdit\n\n\nedit\n\n\nPAYMENTSYSTEMTYPE, PAYMENTSYSTEM, STATUS, PAYMENTSYSTEMMODE, APIMERCHANTID, APIUSERNAME, APIPASSWORD, GATE3DKEY, INTEGRATIONEXTRAFIELD00, INTEGRATIONEXTRAFIELD01, ISDEFAULT, SUBMERCHANTCODE\n\n\n\n\n\n\nRead\n\n\nread\n\n\nPAYMENTSYSTEMTYPE, PAYMENTSYSTEM\n\n\n\n\n\n\nEnable\n\n\nenable\n\n\nPAYMENTSYSTEMTYPE, PAYMENTSYSTEM\n\n\n\n\n\n\nDisable\n\n\ndisable\n\n\nPAYMENTSYSTEMTYPE, PAYMENTSYSTEM\n\n\n\n\n\n\n\n\nBasic Usage\n\n\n$response = $client-\npaymentSystem($action, $args);",
             "title": "Payment System"
         },
         {
@@ -272,7 +272,7 @@
         },
         {
             "location": "/api/payment-type/",
-            "text": "Options\n\n\n\n\n\n\n\n\nAction Name\n\n\nAction\n\n\nParameters\n\n\n\n\n\n\n\n\n\n\nAdd\n\n\nadd\n\n\nPAYMENTSYSTEM, NAME, STATUS, INSTALLMENTS, INTERESTRATE, DISCOUNTRATE, COMMISSIONRATE, VALIDFROM, VALIDTO, APPLYFORDEBITCREDITCARD, APPLYFORCREDITCARD, APPLYFORBUSINESSCARD\n\n\n\n\n\n\nEdit\n\n\nedit\n\n\nPAYMENTSYSTEM, NAME, STATUS, INSTALLMENTS, INTERESTRATE, DISCOUNTRATE, COMMISSIONRATE, VALIDFROM, VALIDTO, APPLYFORDEBITCREDITCARD, APPLYFORCREDITCARD, APPLYFORBUSINESSCARD\n\n\n\n\n\n\nEnable\n\n\nenable\n\n\nPAYMENTSYSTEMTYPE, INSTALLMENTS\n\n\n\n\n\n\nDisable\n\n\ndisable\n\n\nPAYMENTSYSTEMTYPE, INSTALLMENTS\n\n\n\n\n\n\n\n\nBasic Usage\n\n\n\n$response = $client-\npaymentType($action, $args);",
+            "text": "Options\n\n\n\n\n\n\n\n\nAction Name\n\n\nAction\n\n\nParameters\n\n\n\n\n\n\n\n\n\n\nAdd\n\n\nadd\n\n\nPAYMENTSYSTEM, NAME, STATUS, INSTALLMENTS, INTERESTRATE, DISCOUNTRATE, COMMISSIONRATE, VALIDFROM, VALIDTO, APPLYFORDEBITCREDITCARD, APPLYFORCREDITCARD, APPLYFORBUSINESSCARD\n\n\n\n\n\n\nEdit\n\n\nedit\n\n\nPAYMENTSYSTEM, NAME, STATUS, INSTALLMENTS, INTERESTRATE, DISCOUNTRATE, COMMISSIONRATE, VALIDFROM, VALIDTO, APPLYFORDEBITCREDITCARD, APPLYFORCREDITCARD, APPLYFORBUSINESSCARD\n\n\n\n\n\n\nEnable\n\n\nenable\n\n\nPAYMENTSYSTEMTYPE, INSTALLMENTS\n\n\n\n\n\n\nDisable\n\n\ndisable\n\n\nPAYMENTSYSTEMTYPE, INSTALLMENTS\n\n\n\n\n\n\n\n\nBasic Usage\n\n\n$response = $client-\npaymentType($action, $args);",
             "title": "Payment Type"
         },
         {
@@ -287,7 +287,7 @@
         },
         {
             "location": "/api/recurring-payment/",
-            "text": "Options\n\n\n\n\n\n\n\n\nAction Name\n\n\nAction\n\n\nParameters\n\n\n\n\n\n\n\n\n\n\nEdit\n\n\nedit\n\n\nRECURRINGPLANCODE, RECURRENCE, AMOUNT, RECURRINGPAYMENTSTATUS\n\n\n\n\n\n\n\n\nBasic Usage\n\n\n\n$response = $client-\nrecurringPayment($action, $args);",
+            "text": "Options\n\n\n\n\n\n\n\n\nAction Name\n\n\nAction\n\n\nParameters\n\n\n\n\n\n\n\n\n\n\nEdit\n\n\nedit\n\n\nRECURRINGPLANCODE, RECURRENCE, AMOUNT, RECURRINGPAYMENTSTATUS\n\n\n\n\n\n\n\n\nBasic Usage\n\n\n$response = $client-\nrecurringPayment($action, $args);",
             "title": "Recurring Payment"
         },
         {
@@ -302,7 +302,7 @@
         },
         {
             "location": "/api/recurring-plan/",
-            "text": "Options\n\n\n\n\n\n\n\n\nAction Name\n\n\nAction\n\n\nParameters\n\n\n\n\n\n\n\n\n\n\nAdd\n\n\nadd\n\n\nCARDTOKEN, CUSTOMER, CUSTOMERNAME, CUSTOMEREMAIL, CUSTOMERPHONE, TCKN, RECURRINGPLANCODE, FIRSTAMOUNT, RECURRINGAMOUNT, RECURRENCECOUNT, FREQUENCY, OCCURRENCE, STARTDATE, CURRENCY, PAYMENTSYSTEM, NOTIFICATIONCHANNELS\n\n\n\n\n\n\nEdit\n\n\nedit\n\n\nRECURRINGPLANCODE, RECURRINGPLANSTATUS, RECURRINGAMOUNT, PAYMENTSYSTEM\n\n\n\n\n\n\nDelete\n\n\ndelete\n\n\nRECURRINGPLANCODE\n\n\n\n\n\n\nResend Link\n\n\nresend_link\n\n\nRECURRINGPLANCODE, NOTIFICATIONCHANNELS\n\n\n\n\n\n\n\n\nBasic Usage\n\n\n\n$response = $client-\nrecurringPlan($action, $args);",
+            "text": "Options\n\n\n\n\n\n\n\n\nAction Name\n\n\nAction\n\n\nParameters\n\n\n\n\n\n\n\n\n\n\nAdd\n\n\nadd\n\n\nCARDTOKEN, CUSTOMER, CUSTOMERNAME, CUSTOMEREMAIL, CUSTOMERPHONE, TCKN, RECURRINGPLANCODE, FIRSTAMOUNT, RECURRINGAMOUNT, RECURRENCECOUNT, FREQUENCY, OCCURRENCE, STARTDATE, CURRENCY, PAYMENTSYSTEM, NOTIFICATIONCHANNELS\n\n\n\n\n\n\nEdit\n\n\nedit\n\n\nRECURRINGPLANCODE, RECURRINGPLANSTATUS, RECURRINGAMOUNT, PAYMENTSYSTEM\n\n\n\n\n\n\nDelete\n\n\ndelete\n\n\nRECURRINGPLANCODE\n\n\n\n\n\n\nResend Link\n\n\nresend_link\n\n\nRECURRINGPLANCODE, NOTIFICATIONCHANNELS\n\n\n\n\n\n\n\n\nBasic Usage\n\n\n$response = $client-\nrecurringPlan($action, $args);",
             "title": "Recurring Plan"
         },
         {
@@ -317,7 +317,7 @@
         },
         {
             "location": "/api/recurring-plan-card/",
-            "text": "Options\n\n\n\n\n\n\n\n\nAction Name\n\n\nAction\n\n\nParameters\n\n\n\n\n\n\n\n\n\n\nAdd\n\n\nadd\n\n\nRECURRINGPLANCODE, CARDPAN, CARDEXPIRY, NAMEONCARD, CARDTOKEN, CARDSAVENAME\n\n\n\n\n\n\nQuery\n\n\nquery\n\n\nRECURRINGPLANCODE\n\n\n\n\n\n\nDelete\n\n\ndelete\n\n\nRECURRINGPLANCODE, CARDTOKEN\n\n\n\n\n\n\n\n\nBasic Usage\n\n\n\n$response = $client-\nrecurringPlanCard($action, $args);",
+            "text": "Options\n\n\n\n\n\n\n\n\nAction Name\n\n\nAction\n\n\nParameters\n\n\n\n\n\n\n\n\n\n\nAdd\n\n\nadd\n\n\nRECURRINGPLANCODE, CARDPAN, CARDEXPIRY, NAMEONCARD, CARDTOKEN, CARDSAVENAME\n\n\n\n\n\n\nQuery\n\n\nquery\n\n\nRECURRINGPLANCODE\n\n\n\n\n\n\nDelete\n\n\ndelete\n\n\nRECURRINGPLANCODE, CARDTOKEN\n\n\n\n\n\n\n\n\nBasic Usage\n\n\n$response = $client-\nrecurringPlanCard($action, $args);",
             "title": "Recurring Plan Card"
         },
         {
