@@ -1,132 +1,103 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-    
     <url>
-     <loc>/</loc>
-     <lastmod>2017-03-31</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-12-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
-    
-
-    
     <url>
-     <loc>/simple-example/</loc>
-     <lastmod>2017-03-31</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-12-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
-    
-
-    
-        
     <url>
-     <loc>/api/session/</loc>
-     <lastmod>2017-03-31</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-12-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>/api/financial-transactions/</loc>
-     <lastmod>2017-03-31</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-12-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>/api/approve-actions/</loc>
-     <lastmod>2017-03-31</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-12-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>/api/reject-actions/</loc>
-     <lastmod>2017-03-31</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-12-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>/api/dealer/</loc>
-     <lastmod>2017-03-31</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-12-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>/api/dealer-pst/</loc>
-     <lastmod>2017-03-31</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-12-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>/api/dealer-type/</loc>
-     <lastmod>2017-03-31</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-12-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>/api/e-wallet/</loc>
-     <lastmod>2017-03-31</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-12-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>/api/merchant/</loc>
-     <lastmod>2017-03-31</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-12-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>/api/merchant-user/</loc>
-     <lastmod>2017-03-31</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-12-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>/api/message-content/</loc>
-     <lastmod>2017-03-31</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-12-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>/api/pay-by-link-payment/</loc>
-     <lastmod>2017-03-31</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-12-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>/api/payment-policy/</loc>
-     <lastmod>2017-03-31</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-12-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>/api/payment-system/</loc>
-     <lastmod>2017-03-31</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-12-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>/api/payment-type/</loc>
-     <lastmod>2017-03-31</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-12-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>/api/recurring-payment/</loc>
-     <lastmod>2017-03-31</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-12-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>/api/recurring-plan/</loc>
-     <lastmod>2017-03-31</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-12-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>/api/recurring-plan-card/</loc>
-     <lastmod>2017-03-31</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-12-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
-    
-
 </urlset>
